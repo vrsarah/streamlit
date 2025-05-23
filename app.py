@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.adf("""
+st.write("""
 # My first app
 This is a streamlit app!!
 """)
