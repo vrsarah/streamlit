@@ -18,19 +18,6 @@ with col1:
     st.code(f"Current locale: {current_locale}")
     st.code(f"Default encoding: {locale.getpreferredencoding()}")
 
-    # Try to set locale to UTF-8
-    try:
-        # Try different locale formats that might be available on the Linux system
-        for loc in ['en_US.UTF-8', 'C.UTF-8', 'UTF-8']:
-            try:
-                locale.setlocale(locale.LC_ALL, loc)
-                st.success(f"Successfully set locale to: {loc}")
-                break
-            except locale.Error:
-                continue
-    except Exception as e:
-        st.error(f"Error setting locale: {e}")
-
     st.code(f"Locale after setting: {locale.getlocale()}")
 
 with col2:
