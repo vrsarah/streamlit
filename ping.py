@@ -1,7 +1,7 @@
 import streamlit as st
 import threading
 
-st.title("Self-Pinging Streamlit App Without URL")
+st.title("Self-Pinging Streamlit App")
 st.write("This app will stay awake by periodically refreshing itself.")
 
 def self_refresh():
