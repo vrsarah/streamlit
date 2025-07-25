@@ -43,3 +43,4 @@ urllib3==2.2.0
 validators==0.22.0
 zipp==3.17.0
 bjoern==3.2.2
+private-pkg @ git+https://github.com/vrsarah/private-pkg#egg=private-pkg
