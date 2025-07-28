@@ -43,4 +43,4 @@ urllib3==2.2.0
 validators==0.22.0
 zipp==3.17.0
 bjoern==3.2.2
-prettynum @ git+https://github.com/vrsarah/private-pkg.git@04555853bc03749b6dcd9f22940af4cde1ec93de
+prettynum @ git+https://github.com/vrsarah/private-pkg.git#egg=private-pkg
