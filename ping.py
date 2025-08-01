@@ -1,15 +1,21 @@
 import streamlit as st
-import threading
+import time
+from datetime import datetime
 
 st.title("Self-Pinging Streamlit App")
 st.write("This app will stay awake by periodically refreshing itself.")
 
-def self_refresh():
-    threading.Timer(60, self_refresh).start()  # Refresh every 60 seconds
-    st.experimental_rerun()
+# Auto-refresh using meta tag
+st.markdown(
+    """
+    <meta http-equiv="refresh" content="60">
+    """,
+    unsafe_allow_html=True
+)
 
-if "self_refresh_started" not in st.session_state:
-    st.session_state.self_refresh_started = True
-    self_refresh()
+# Display current time to show it's working
+st.write(f"Last refresh: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
-st.write("Self-refreshing mechanism started.")
+# Optional: Add a manual refresh button
+if st.button("Manual Refresh"):
+    st.rerun()
