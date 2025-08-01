@@ -14,7 +14,7 @@ def ping_self():
             app_url = "https://connect.posit.cloud/vrsarah/content/019866d5-3931-b4d7-68dd-7e56ea9d588a"
             response = requests.get(app_url, timeout=10)
             st.session_state.last_ping = datetime.now()
-            time.sleep(300)  # Ping every 5 minutes
+            time.sleep(180)  # Ping every 3 minutes
         except Exception as e:
             st.session_state.ping_error = str(e)
             time.sleep(60)  # Retry after 1 minute on error
